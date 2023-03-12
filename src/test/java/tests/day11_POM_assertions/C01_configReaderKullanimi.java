@@ -17,7 +17,7 @@ public class C01_configReaderKullanimi {
 
         // Test datasi olarak verilen kelime icin arama yapalim
         AmazonPage amazonPage = new AmazonPage();
-        amazonPage.aramaKutusu.sendKeys(ConfigReader.getProperty("amazonAranacakKelime")+ Keys.ENTER);
+        AmazonPage.aramaKutusu.sendKeys(ConfigReader.getProperty("amazonAranacakKelime")+ Keys.ENTER);
 
         // arama sonuclarinin arattigimiz test datasini icerdigini test edelim
 
