@@ -15,12 +15,13 @@ public class Driver {
     public static WebDriver getDriver() {
 
         WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
 
         if (driver == null) {
             driver = new ChromeDriver();
 
         }
-        driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -33,7 +34,6 @@ public class Driver {
             driver.close();
             driver = null;
         }
-
 
     }
 

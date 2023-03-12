@@ -37,7 +37,7 @@ public class C01_Priority {
         // wisequarter ana sayfaya gidip, wisequarter'a gittigimizi test edelim
         Driver.getDriver().get("https://www.wisequarter.com");
 
-        // url amazon iceriyor mu test edelim
+        // url wisequarter iceriyor mu test edelim
         String expectedIcerik = "wisequarter";
         String actualUrl= Driver.getDriver().getCurrentUrl();
 
@@ -53,8 +53,10 @@ public class C01_Priority {
     public void youtubeTesti() throws InterruptedException{
         // youtube ana sayfaya gidip, youtube gittigimizi test edelim
         Driver.getDriver().get("https://www.youtube.com");
+        Thread.sleep(2000);
+        Driver.getDriver().navigate().refresh();
 
-        // url amazon iceriyor mu test edelim
+        // url youtube iceriyor mu test edelim
         String expectedIcerik = "youtube";
         String actualUrl= Driver.getDriver().getCurrentUrl();
 

@@ -9,7 +9,7 @@ public class AmazonPage {
 
     /*
         Pages class'lari surekli kullandigimiz locate'leri
-        tekrar tekrar locate etmek zorunda kalmaktan kurtulmak icin kullanilir
+        tekrar tekrar locate etmek zorunda kalmaktan kurtulmak icin kullanilir.
         Her pages class'i Driver class'inda olusturulan driver'i kullanir
         @FindBy notasyonunun Driver class'indaki webDriver'i kullanabilmesi icin
         bu class'a tanitmamiz gerekiyor
@@ -23,7 +23,7 @@ public class AmazonPage {
     }
 
     @FindBy(id="twotabsearchtextbox")
-    public static WebElement aramaKutusu;
+    public WebElement aramaKutusu;
 
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement aramaSonucElementi;

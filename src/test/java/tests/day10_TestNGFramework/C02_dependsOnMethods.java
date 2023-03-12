@@ -37,7 +37,10 @@ public class C02_dependsOnMethods {
         String actualurl=Driver.getDriver().getCurrentUrl();
 
         Assert.assertTrue(actualurl.contains(expectedIcerik));
+
+
     }
+
 
     @Test (dependsOnMethods = "amazonTesti")
     public void nutellaTesti(){
@@ -62,11 +65,6 @@ public class C02_dependsOnMethods {
         Assert.assertTrue(actualUrunIsmi.contains(exoectedIcerik));
 
         Driver.closeDriver();
-
-
-
-
-
 
     }
 
